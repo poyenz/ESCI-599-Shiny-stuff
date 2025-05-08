@@ -100,7 +100,7 @@ server <- function(input, output, session) {
   })
 # adding 2nd plot with rate instead of raw count
 # modified to use plotly
-  output$age_sex_rate <- renderPlot({
+  output$age_sex_rate <- renderPlotly({
     plot_2 <- summary() %>%
       ggplot(aes(age, rate, colour = sex)) +
       geom_line(na.rm = TRUE) +
